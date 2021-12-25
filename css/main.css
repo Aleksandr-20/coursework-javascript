@@ -1,0 +1,507 @@
+@import "flex-grid.css";
+@import "style.css";
+
+/* 1-я строка */
+#introduction {
+	display: flex;
+	flex-direction: row;
+	background-color: rgb(214, 183, 144);
+	margin: 1rem 8rem;
+	border-radius: 8px;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1rem 1rem 1.5rem;
+}
+
+.row-1-col-1 {
+	display: flex;
+  	flex-direction: column;
+  	width: 50%;
+}
+
+.row-1-col-1 h2 {
+	text-align: center;
+	/* padding: 0 1rem 1rem 1.5rem; */
+}
+
+.row-1-col-1 p {
+	font-size: 18px;
+	padding: 0;
+	margin: 0;
+	font-style: oblique;
+}
+
+.row-1-col-2 {
+	width: 50%;
+}
+
+/* слайдер с картинкой */
+.slider {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.slider > li {
+    display: none;
+	text-align: center;
+}
+
+.slider img {
+	width: 85%;
+	/* height: auto; */
+	text-align: center;
+	border-radius: 8px;
+}
+
+.slider > li.active {
+    display: block;
+}
+
+/* 2-я и 3-я строка с популярными товарами */
+#goods {
+	margin: 0 8rem;
+}
+
+/* вкладки */
+.tabs {
+	width: 100%;
+	border-bottom: 1px solid rgb(82, 81, 81);
+	margin-bottom: 1rem;
+	display: inline-flex;
+	justify-content: space-evenly;
+}
+/* прячем чекбоксы */
+.tabs > input {
+	display: none;
+	position: absolute;
+}
+/* стили переключателей вкладок */
+.tabs > label {
+	display: inline-block;
+	padding: 1rem 2rem;
+	text-align: center;
+	color: rgb(170, 170, 170);
+	text-transform: uppercase;
+	width: 25%;
+}
+.tabs span {
+	display: none;
+}
+
+.tabs > label:hover {
+	color: rgb(165, 34, 78);
+	cursor: pointer;
+}
+
+.tabs > input:checked+label {
+	color: rgb(165, 34, 78);
+	font-weight: bold;
+}
+
+/* #content-tab1, #content-tab2, #content-tab3 {
+	display: none;
+} */
+
+/* #tab1:checked~#content-tab1, #tab2:checked~#content-tab2 {
+	display: block;
+   } */
+
+/* карточки с популярными товарами и т.д.*/
+.row-2, .row-3 {
+    display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+	margin-bottom: 1rem;
+}
+
+.row-2 .item, .row-3 .item {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    padding: 0 20px;
+	border-radius: 5px;
+    width: 18%;
+}
+
+.row-2 > .item:hover, .row-3 > .item:hover {
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.item > img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+    height: auto;
+    max-height: 200px;
+	padding-top: 1rem;
+}
+
+.item > h4 {
+    text-align: center;
+	height: 20%;
+	white-space: pre-wrap;
+}
+
+.item:hover img {
+    transform: scale(1.5);
+    transition: transform 2s linear;
+}
+
+.description-wine {
+	display: flex;
+	padding-top: 10px;
+	/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+	/* background-color: aqua; */
+    /* vertical-align: bottom; */
+	margin-top: auto;
+}
+
+.description-wine > .left-side,
+.description-wine > .right-side {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.description-wine > .left-side > * {
+	display: block;
+	margin-left: auto;
+}
+
+.description-wine .left-side a {
+	color:rgb(165, 42, 42);
+	font-size: 25px;
+	padding-top: 15px;
+}
+
+.description-wine .left-side a:hover {
+	color: rgb(76, 9, 91);
+}
+
+.right-side .price {
+	font-size: 20px;
+}
+
+/* блок новостей */
+#news {
+	display: flex;
+	flex-direction: row;
+	border-radius: 8px;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 0 8rem;
+}
+
+#news h2, #blog h2 {
+	display: block;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+.news-img {
+	width: 40%;
+}
+
+.news-img > img {
+	width: 85%;
+	height: auto;
+	text-align: center;
+	/* margin-right: auto;
+    margin-left: auto; */
+	border-radius: 8px;
+}
+
+.news-list {
+	display: flex;
+  	flex-direction: column;
+  	width: 40%;
+	padding: 0 1rem 1rem 1.5rem;
+}
+
+.news-list a {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	padding: 0 1rem;
+}
+
+.news-list a:hover {
+	background-color: rgb(214, 183, 144);
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* блок со статьями */
+#blog {
+	margin: 0 8rem;
+}
+
+#blog .articles {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+.articles article {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 1rem;
+}
+
+.articles article img {
+	width: 100%;
+	/* height: 25rem; */
+	height: 70%;
+	object-fit: cover;
+}
+
+.articles article:hover {
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+	#introduction {
+		display: flex;
+		background-color: rgb(214, 183, 144);
+		margin: 1rem 2rem;
+		border-radius: 8px;
+		justify-content: center;
+	}
+	.row-1-col-1 p {
+		font-size: 14px;
+		padding: 0;
+		margin: 0;
+		font-style: oblique;
+	}
+	.slider {
+		padding-top: 3rem;
+		display: block;
+	}
+	#goods {
+		margin: 0;
+		width: 100%;
+	}
+	.tabs > label {
+		display: inline-block;
+		padding: 1rem 2rem;
+		text-align: center;
+		color: rgb(170, 170, 170);
+		text-transform: uppercase;
+		width: 25%;
+	}
+	.row-3, .row-2 {
+		flex-wrap: wrap;
+	}
+	.row-2 .item, .row-3 .item {
+		display: flex;
+		flex-direction: column;
+		background-color: rgb(255, 255, 255);
+		padding: 0 1rem;
+		border-radius: 8px;
+		width: 18%;
+		margin-bottom: 1rem;
+	}
+	#news {
+		margin: 0;
+		margin-left: 1rem;
+	}
+	#blog {
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.articles article img {
+		width: 100%;
+		height: 18rem;
+		/* height: 70%; */
+		object-fit: cover;
+	}
+}
+
+/* ширина от 600 до 767px */
+@media screen and (min-width: 600px) and (max-width: 767px){
+	#introduction {
+		display: flex;
+		flex-direction: column;
+		background-color: rgb(214, 183, 144);
+		margin: 1rem 4rem;
+		border-radius: 8px;
+		justify-content: center;
+		padding: 0 1rem 1rem 1.5rem;
+		height: 100%;
+	}
+	.row-1-col-1, .row-1-col-2 {
+		width: 100%;
+	}
+	.row-1-col-1 p {
+		font-size: 10px;
+		padding: 0;
+		margin: 0;
+		font-style: oblique;
+	}
+	.slider {
+		margin-top: 1rem;
+		width: 100%;
+	}
+	#goods {
+		margin: 0;
+		width: 100%;
+	}
+	.tabs {
+		margin-left: .5rem;
+	}
+	.tabs > label {
+		display: inline-block;
+		padding: .5rem 2rem;
+		text-align: center;
+		color: rgb(170, 170, 170);
+		text-transform: uppercase;
+		width: 25%;
+		font-size: 14px;
+	}
+	.row-3, .row-2 {
+		flex-wrap: wrap;
+	}
+	.row-2 .item, .row-3 .item {
+		display: flex;
+		flex-direction: column;
+		background-color: rgb(255, 255, 255);
+		padding: 0 1rem;
+		border-radius: 8px;
+		width: 35%;
+		margin-bottom: 1rem;
+	}
+	#news {
+		display: block;
+		border-radius: 8px;
+		width: 100%;
+		margin: 0;
+	}
+	#news h2, #blog h2 {
+		text-align: center;
+		font-size: 20px;
+	}
+	.news-img {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.news-list {
+		margin: 0 auto;
+		width: 80%;
+		padding: 0 1rem 1rem 1.5rem;
+	}
+	#blog {
+		display: block;
+		width: 90%;
+		margin-left: 2rem;
+	}
+	#blog .articles {
+		display: flex;
+		flex-direction: column;
+	}
+	.articles article {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		padding: 0 1rem;
+	}
+}
+
+/* ширина до 599px */
+@media screen and (max-width: 599px){ /* 480px */
+	#introduction {
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		background-color: rgb(214, 183, 144);
+		margin: 0 auto;
+		border-radius: 5px;
+		padding: 0 1rem;
+		height: auto;
+		margin-left: 2.5rem;
+	}
+	.row-1-col-1, .row-1-col-2 {
+		width: 100%;	  
+	}
+	.row-1-col-1 h2 {
+		font-size: 18px;
+		text-align: center;
+	}
+	.row-1-col-1 p {
+		font-size: 10px;
+		padding: 0;
+		margin: 0;
+		font-style: oblique;
+	}
+	.slider {
+		width: 100%;
+		padding: 1rem 0;
+		margin: 0;
+	}
+	#goods {
+		margin: 0;
+		width: 100%;
+	}
+	.tabs {
+		margin-left: 1.5rem;
+	}
+	.tabs p {
+		display: none;
+	}
+	.tabs span {
+		display: inline-block;
+	}
+
+	.row-3, .row-2 {
+		flex-wrap: wrap;
+	}
+	.row-2 .item, .row-3 .item {
+		display: flex;
+		flex-direction: column;
+		background-color: rgb(255, 255, 255);
+		padding: 0 1rem;
+		border-radius: 8px;
+		width: 60%;
+		margin-bottom: 1rem;
+		margin-left: 3rem;
+	}
+	#news {
+		display: block;
+		border-radius: 8px;
+		width: 100%;
+		margin-left: 1rem;
+	}
+	#news h2, #blog h2 {
+		text-align: center;
+		font-size: 19px;
+	}
+	.news-img {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.news-list {
+		margin: 0 auto;
+		width: 80%;
+		padding: 0 1rem 1rem 1.5rem;
+	}
+	#blog {
+		display: block;
+		width: 90%;
+		margin-left: 2rem;
+	}
+	#blog .articles {
+		display: flex;
+		flex-direction: column;
+	}
+	.articles article {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		padding: 0 1rem;
+	}
+}

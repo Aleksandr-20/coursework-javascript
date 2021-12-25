@@ -1,0 +1,455 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(220, 236, 236);
+	width: 100%;
+	/* font-family: Arial, Helvetica, sans-serif; */
+}
+
+/* фиксированные элементы */
+#to-menu {
+    /* font-size: 2.7rem; */
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+#to-menu a {
+	color: rgb(165, 34, 78);
+}
+
+.submenu {
+    display: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+/* шапка сайта с меню и логотипом */
+header {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header-left {
+	display: flex;
+  	align-items: center;
+  	height: auto;
+	width: 50%;
+	background-color: rgb(220, 236, 236);
+	/* margin-left: 1rem; */
+}
+
+.header-left h2 {
+	color:rgb(76, 9, 91);
+}
+
+.header-left > * {
+	margin: .2rem 0 .2rem 1rem;
+}
+
+.header-right > * {
+	margin: .2rem 1rem .2rem 0;
+}
+
+.header-right {
+	display: flex;
+	align-items: center;
+	height: auto;
+	width: 50%;
+	flex-direction: row-reverse;	
+	background-color: rgb(220, 236, 236);
+	/* margin-right: 1rem; */
+}
+
+.header-right a {
+	padding: .2rem;
+	text-decoration: none;
+	color:rgb(76, 9, 91);
+	/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+	border-bottom: 1px solid transparent;
+}
+
+.header-right a:hover {
+	border-bottom: 1px solid rgb(226, 140, 82);
+	color:rgb(226, 140, 82);
+}
+
+#menu {
+	background-color: rgb(165, 34, 78);
+	display: flex;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#menu a {
+	flex: 1;
+	color: rgb(228, 234, 236);
+	text-decoration: none;
+	padding: .5rem;
+	/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+	text-align: center;
+	margin: 0;
+}
+
+#menu a:hover {
+    background-color:  rgb(214, 183, 144);
+    color:rgb(165, 34, 78);
+	height: auto;
+}
+
+main {
+	max-width: auto;
+	display: block;
+	margin-top: 6rem;
+}
+
+/* кнопка ссылки */
+.down-link {
+	display: block;
+	width: 30%;
+	color: rgb(165, 34, 78);
+	text-decoration: none;
+	margin: 1rem auto 0;
+	padding: .5rem;
+	text-align: center;
+}
+
+.down-link:hover {
+	text-decoration: underline;
+}
+
+/* подвал сайта */
+footer {
+	margin-top: 1rem;
+	background-color: rgb(116, 117, 117);
+	border-top: 6px solid rgb(165, 34, 78);
+	height: auto;
+}
+
+.main-footer {
+	display: flex;
+  	flex-direction: row;
+}
+
+.newsletter-socnetworks {
+	width: 50%;
+	padding-left: 2rem;
+}
+
+.customer-buyer {
+	width: 25%;
+	padding-left: 1rem;
+}
+
+.location {
+	width: 25%;
+	padding-left: 1rem;
+}
+
+footer input[type=text] {
+	display: inline-block;
+    width: 60%;
+    padding: .8rem;
+    margin: 0;
+	border: none;
+	background-color: rgb(190, 194, 194);
+}
+
+footer button {
+	padding: .8rem;
+    background-color: rgb(165, 34, 78);
+    color: rgb(218, 216, 216);
+	margin: 0;
+	border: none;
+}
+
+footer button:hover {
+    opacity: 0.7;
+	cursor: pointer;
+}
+
+footer label {
+	display: block;
+	font-size: 13px;
+}
+
+.soc-network p {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.soc-network a {
+	padding: 1rem;
+}
+
+.soc-network a:hover {
+	color: rgb(165, 34, 78);
+}
+
+footer a {
+	text-decoration: none;
+	color:rgb(0, 0, 0);
+}
+
+.customer-buyer a:hover {
+	opacity: 0.7;
+}
+
+.customer-buyer p {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.customer-buyer a {
+	text-transform: uppercase;
+	font-size: small;
+}
+
+.custom, .buyer, .location {
+	display: flex;
+	flex-direction: column;
+}
+
+.location a {
+	margin-bottom: 1rem;
+}
+
+.location a:hover {
+	text-decoration: underline;
+}
+
+.footer-underline {
+	display: flex;
+	margin-top: 1rem;
+	border-top: 1px solid rgb(190, 194, 194);
+}
+
+.footer-underline > * {
+	margin: 1rem;
+}
+
+.footer-underline a:hover {
+	opacity: 0.7;
+}
+
+.hamburger-menu {
+	display: none;
+}
+
+/* скрываем чекбокс */
+#menu__toggle {
+	opacity: 0;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: .5rem;
+	left: .5rem;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: rgb(165, 34, 78);
+}
+
+.menu__btn > span::before {
+	content: '';
+	top: -8px;
+}
+
+.menu__btn > span::after {
+	content: '';
+	top: 8px;
+}
+
+.menu__box {
+	display: block;
+	position: fixed;
+	visibility: hidden;
+	top: 0;
+	left: -100%;
+	width: 40%;
+	height: 100%;
+	margin: 0;
+	padding: 80px 0;
+	text-decoration: none;
+	text-align: center;
+	background-color: rgb(220, 236, 236);
+	box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+.menu__item {
+	display: block;
+	padding: 1rem;
+	color: rgb(59, 58, 58);
+	text-decoration: none;
+}
+
+.menu__item:hover {
+	background-color: rgb(165, 34, 78);
+	color:rgb(218, 216, 216);
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+	transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+	top: 0;
+	transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+	visibility: visible;
+	left: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .header-right {
+		justify-content: space-evenly;
+	}
+	.header-right a > span {
+		display: none;
+	}
+}
+
+/* ширина от 600 до 767px */
+@media screen and (min-width: 600px) and (max-width: 767px){
+	main {
+		margin-top: 5rem;
+	}
+	header {
+		border-bottom: 1px solid rgb(165, 34, 78);
+	}
+	h2 {
+        font-size: small;
+		font-weight: bold;
+    }
+	.header-right {
+		justify-content: space-evenly;
+	}
+	.header-right a > span {
+		display: none;
+	}
+	.hamburger-menu {
+		display: block;
+	}
+	#menu {
+		display: none;
+	}
+	
+	footer {
+		display: block;
+		margin: 0;
+	}
+
+	.main-footer {
+		display: block;
+		width: 100%;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	.newsletter-socnetworks,
+	.customer-buyer,
+	.location {
+		width: 100%;
+		padding-left: 1rem;
+	}
+	.newsletter-socnetworks {
+		font-size: 14px;
+	}
+
+	.footer-underline {
+		display: block;
+		margin-top: 1rem;
+		padding-left: 1rem;
+		border-top: 1px solid rgb(190, 194, 194);
+	}
+	.footer-underline > * {
+		margin: 0;
+		padding: .5rem;
+	}
+}
+
+/* ширина до 599px */
+@media screen and (max-width: 599px){ /* 480px */
+	main {
+		margin-top: 4rem;
+	}
+	header {
+		border-bottom: 1px solid rgb(165, 34, 78);
+	}
+    .header-left h2 {
+        display: none;
+    }
+	.header-right {
+		justify-content: space-evenly;
+	}
+	.header-right a > span {
+		display: none;
+	}
+	.hamburger-menu {
+		display: block;
+	}
+	#menu {
+		display: none;
+	}
+	
+	footer {
+		display: block;
+		margin: 0;
+	}
+
+	.main-footer {
+		display: block;
+		width: 100%;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	.newsletter-socnetworks,
+	.customer-buyer,
+	.location {
+		width: 100%;
+		padding-left: 1rem;
+	}
+	.newsletter-socnetworks {
+		font-size: 14px;
+	}
+
+	.footer-underline {
+		display: block;
+		padding-left: 1rem;
+		border-top: 1px solid rgb(190, 194, 194);
+	}
+	.footer-underline > * {
+		margin: 0;
+		padding: .5rem;
+	}
+}

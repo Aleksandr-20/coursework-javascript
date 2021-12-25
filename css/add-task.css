@@ -1,0 +1,80 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
+
+main {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.response {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.title {
+	margin-left: 10%;
+	padding: 0;
+}
+
+.form-item {
+	padding-top: .5rem;
+	margin-bottom: .5rem;
+}
+  
+.form-item label {
+	margin-left: 10%;
+}
+  
+.response input,
+.response textarea {
+	display: block;
+	width: 80%;
+	padding: 1.8rem 0 1.8rem 1rem;
+	border: 1px solid rgb(29, 202, 224);
+	margin: 0 auto;
+}
+  
+.response textarea {
+	min-height: 5rem;
+}
+  
+.response input[type="submit"] {
+	display: block;
+	width: 50%;
+	padding: 1.5rem;
+	background: rgb(16, 131, 167);
+	border: none;
+	margin: 1rem auto;
+}
+
+button {
+	display: block;
+	width: 30%;
+	padding: .5rem;
+	background: rgb(175, 218, 21);
+	border: none;
+	margin-top: 1rem;
+	margin-left: 10%;
+	border-radius: 5px;
+}
+  
+.response input[type="submit"]:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.response input:focus,
+.response textarea:focus {
+	outline: none;
+	border: 1px solid rgb(107, 228, 107);
+}
+
+#success {
+	text-align: center;
+	text-transform: uppercase;
+	color: rgb(101, 167, 4);
+	text-decoration: underline;
+}

@@ -1,0 +1,125 @@
+@import "style.css";
+
+body {
+    background-image: url('../img/auth_oboi.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+body:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+form {
+    color:rgb(165, 34, 78);
+    padding: 3rem;
+    background-color: rgb(236, 231, 243);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+}
+
+input[type="text"], /* тег input со значением 'text' атрибута 'type' */
+input[type="password"],  /* тег input со значением 'password' атрибута 'type' */
+.login-icon,
+.pwd-icon {
+    font-size: 1rem;
+    color: rgb(165, 34, 78);
+}
+
+/* СТИЛИЗАЦИЯ  placeholder */
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input::-ms-input-placeholder {
+    color: black;
+}
+
+input[type="text"],
+input[type="password"] {
+    border-style: none;
+    outline-style: none;
+    background-color: transparent;
+    border-bottom: 3px solid rgb(165, 34, 78);
+    border-radius: 0;
+          /* верх право низ лево */
+    padding: .5rem 0 .5rem 2rem;
+    text-transform: capitalize;
+    /* width: 100%; */
+}
+
+form div {
+    position: relative;
+}
+
+.login-icon,
+.pwd-icon {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    padding-left: 0;
+    border-bottom-color: rgb(136, 255, 0);
+    padding-right: 2rem;
+}
+
+input[type="text"]:focus + .login-icon,
+input[type="password"]:focus + .pwd-icon {
+    display: none;
+}
+
+.low-btns {
+    display: flex;
+    flex-direction: column;
+}
+
+#enter {
+    display: block;
+	width: 100%;
+	padding: .7rem;
+	margin: .5rem auto 1.5rem;
+	background: rgb(165, 34, 78);
+	border: none;
+}
+
+#enter:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.low-btns a {
+    color: rgb(12, 12, 12);
+}
+
+/* кнопка закрытия */
+.AClass {
+    top: 3%;
+    right: 3%;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgb(165, 34, 78);
+}
+
+.AClass:hover {
+    cursor: pointer;
+    border: 1px solid rgb(119, 0, 40);
+    color: rgb(255, 81, 0);
+}
