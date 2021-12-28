@@ -48,27 +48,28 @@ date.addEventListener('blur', function (event) {
     }
   });
   
-var tasks = [];
-let i = 0;
-// localStorage.setItem("tasks", JSON.stringify(tasks));
+// var tasks = [];
+var data = localStorage.getItem("tasks");
+var tasks = data ? JSON.parse(data) : [];
 
 let taskForm = document.getElementsByName("add-task")[0];
 taskForm.addEventListener('submit', addValues);
   
 function addValues(event) {
   event.preventDefault();
-  tasks[i] = {
+  let task = {
     title: title.value,
     description: desc.value,
     date: date.value
   };
 
-  // tasks.push(task);
-  
+  tasks.push(task);
   localStorage.setItem("tasks", JSON.stringify(tasks));
-  this.reset();
-  i++;
-  console.log(tasks);
 
+  let getTasks = localStorage.getItem("tasks");
+  getTasks = JSON.parse(getTasks);
+
+  // console.log(tasks);
   document.getElementById("success").innerText = "Задача успешно добавлена";
+  this.reset();
 }

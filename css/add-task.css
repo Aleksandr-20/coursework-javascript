@@ -32,19 +32,19 @@ main {
 .response textarea {
 	display: block;
 	width: 80%;
-	padding: 1.8rem 0 1.8rem 1rem;
+	padding: 1.5rem 0 1.5rem 1rem;
 	border: 1px solid rgb(29, 202, 224);
 	margin: 0 auto;
 }
   
 .response textarea {
-	min-height: 5rem;
+	min-height: 3rem;
 }
   
 .response input[type="submit"] {
 	display: block;
 	width: 50%;
-	padding: 1.5rem;
+	padding: 1rem;
 	background: rgb(16, 131, 167);
 	border: none;
 	margin: 1rem auto;
@@ -73,8 +73,13 @@ button {
 }
 
 #success {
+	width: 50%;
+	border-radius: 5px;
+	margin: 0 auto;
 	text-align: center;
 	text-transform: uppercase;
-	color: rgb(101, 167, 4);
-	text-decoration: underline;
+	background-color: rgb(225, 240, 16);
+	color: rgb(9, 87, 87);
+	margin-bottom: 1rem;
+	/* padding: .5rem 0; */
 }
