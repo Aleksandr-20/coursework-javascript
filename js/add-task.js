@@ -19,24 +19,8 @@ var mm = today.getMonth()+1; //January is 0!
 var yyyy = today.getFullYear();
 var hh = today.getHours();
 var min = today.getMinutes();
- 
-// if (dd < 10) {
-//     dd = '0' + dd;
-// } 
 
-// if (mm < 10) {
-//     mm = '0' + mm;
-// }
-
-// if (hh < 10) {
-//     hh = '0' + hh;
-// }
-
-// if (min < 10) {
-//     min = '0' + min;
-// }
-
-today = yyyy+'-'+mm+'-'+dd+'T'+hh+':'+min;
+today = yyyy + '-' + mm + '-' + dd + 'T' + hh + ':' + min;
 document.getElementById("term").setAttribute("min", today);
 document.getElementById("term").setAttribute("value", today);
 
@@ -69,7 +53,8 @@ function addValues(event) {
   let getTasks = localStorage.getItem("tasks");
   getTasks = JSON.parse(getTasks);
 
-  // console.log(tasks);
-  document.getElementById("success").innerText = "Задача успешно добавлена";
   this.reset();
+
+  console.log(tasks);
+  document.getElementById("success").innerText = "Задача успешно добавлена";
 }

@@ -1,0 +1,54 @@
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	color: rgb(245, 65, 33);
+	/* text-shadow: rgb(236, 22, 236); */
+}
+
+.task-list {
+    display: block;
+    height: 100%;
+}
+
+.card-task {
+    width: 60%;
+    height: auto;
+    background-color: rgba(92, 230, 122, 0.897);
+    /* border: 4px double #6e2565; */
+    margin: .5rem auto;
+    padding: 1rem 1rem;
+    /* text-align: center; */
+}
+
+.show {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 0;
+    background-color:rgb(245, 65, 33);
+    color: rgb(4, 23, 78);
+    width: 30%;
+    border: 0;
+    border-radius: 5px;
+}
+
+.show:hover, .card-task:hover {
+	opacity: 0.8;
+	/* box-shadow: 0 0 10px rgba(0,0,0,0.5); */
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.message {
+    color:rgb(75, 9, 18);
+    font-size: x-large;
+    font-weight: bold;
+    margin: 1rem auto;
+    text-transform: uppercase;
+}
+
+.mark {
+    background-color: rgb(241, 66, 46);
+}
