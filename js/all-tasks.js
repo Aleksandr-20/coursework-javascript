@@ -85,5 +85,12 @@ function clickDeleteTask() {
 }
 
 function deleteTask() {
-  pressElem.forEach(elem => УДАЛИТЬ)
+  let markTasks = document.querySelectorAll(".mark");
+  if (markTasks.length) {
+    markTasks.forEach((task) => {
+      task.remove();
+    });
+  }
 }
+
+clickDeleteTask();
