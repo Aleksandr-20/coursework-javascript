@@ -46,15 +46,12 @@ function addValues(event) {
     description: desc.value,
     date: date.value
   };
-
+  if (localStorage.getItem('tasks') !== null) {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
   tasks.push(task);
   localStorage.setItem("tasks", JSON.stringify(tasks));
-
-  let getTasks = localStorage.getItem("tasks");
-  getTasks = JSON.parse(getTasks);
-
   this.reset();
-
   console.log(tasks);
   document.getElementById("success").innerText = "Задача успешно добавлена";
 }
