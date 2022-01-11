@@ -2,7 +2,6 @@
 
 var title = document.getElementById("title");
 var send = document.getElementById("send");
-var date = document.getElementById("term");
 var desc = document.getElementById("description");
 
 title.addEventListener('blur', function (event) {
@@ -20,9 +19,25 @@ var yyyy = today.getFullYear();
 var hh = today.getHours();
 var min = today.getMinutes();
 
+if (dd < 10) {
+  dd='0' + dd
+} 
+if (mm < 10) {
+  mm='0' + mm
+}
+if (hh < 10) {
+  hh='0' + hh
+}
+if (min < 10) {
+  min='0' + min
+}
+
 today = yyyy + '-' + mm + '-' + dd + 'T' + hh + ':' + min;
+
 document.getElementById("term").setAttribute("min", today);
 document.getElementById("term").setAttribute("value", today);
+
+let date = document.getElementById("term");
 
 date.addEventListener('blur', function (event) {
     if (date.validity.rangeUnderflow) {
