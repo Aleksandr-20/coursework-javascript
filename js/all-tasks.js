@@ -91,8 +91,6 @@ function deleteTask() {
       task.remove();
     });
   }
-  localStorage.clear();
-  localStorage.setItem("tasks", JSON.stringify(tasksFromStorage));
 }
 
 clickDeleteTask();

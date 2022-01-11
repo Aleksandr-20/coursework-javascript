@@ -52,3 +52,14 @@ h1 {
 .mark {
     background-color: rgb(241, 66, 46);
 }
+
+.down-link {
+	display: block;
+	width: 30%;
+	color: rgb(97, 9, 71);
+	text-decoration: none;
+	margin: .5rem auto 0;
+	padding: .5rem;
+	text-align: center;
+	font-size: medium;
+}
