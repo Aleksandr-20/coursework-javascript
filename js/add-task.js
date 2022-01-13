@@ -61,15 +61,20 @@ function addValues(event) {
     title: title.value,
     description: desc.value,
     date: date.value,
-    id: ++id
+    id: ++id + title.value
   };
+
   if (localStorage.getItem('tasks') !== null) {
     tasks = JSON.parse(localStorage.getItem("tasks"));
   }
   tasks.push(task);
   localStorage.setItem("tasks", JSON.stringify(tasks));
 
-  this.reset();
-  console.log(tasks);
   document.getElementById("success").innerText = "Задача успешно добавлена";
+  document.getElementById("success").classList.add("visible");
+
+  this.reset();
+
+  setTimeout(() => {document.getElementById("success").classList.remove("visible")}, 2000);
+  console.log(tasks);
 }

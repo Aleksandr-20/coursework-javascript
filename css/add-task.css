@@ -84,6 +84,14 @@ button {
 	/* padding: .5rem 0; */
 }
 
+.success {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+
 .down-link {
 	display: block;
 	width: 30%;
