@@ -52,6 +52,7 @@ var data = localStorage.getItem("tasks");
 var tasks = data ? JSON.parse(data) : [];
 
 let taskForm = document.getElementsByName("add-task")[0];
+var id = 0; // счетчик id
 taskForm.addEventListener('submit', addValues);
   
 function addValues(event) {
@@ -59,13 +60,15 @@ function addValues(event) {
   let task = {
     title: title.value,
     description: desc.value,
-    date: date.value
+    date: date.value,
+    id: ++id
   };
   if (localStorage.getItem('tasks') !== null) {
     tasks = JSON.parse(localStorage.getItem("tasks"));
   }
   tasks.push(task);
   localStorage.setItem("tasks", JSON.stringify(tasks));
+
   this.reset();
   console.log(tasks);
   document.getElementById("success").innerText = "Задача успешно добавлена";
