@@ -82,6 +82,8 @@ markTask();
 
 function clickDeleteTask() {
   deleteButton.addEventListener('click', deleteTask);
+  // let newTasks = document.querySelectorAll(".card-task");
+  // localStorage.setItem("tasks", JSON.stringify(newTasks));
 }
 
 function deleteTask() {
@@ -90,9 +92,9 @@ function deleteTask() {
     markTasks.forEach((task) => {
       task.remove();
     });
+    let newTasks = document.querySelectorAll(".card-task");
+    localStorage.setItem("tasks", JSON.stringify(newTasks));
   }
-
-  // localStorage.setItem("tasks",JSON.stringify(newTasks));
 }
 
 clickDeleteTask();
